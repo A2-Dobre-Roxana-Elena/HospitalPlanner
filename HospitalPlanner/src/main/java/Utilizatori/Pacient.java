@@ -10,16 +10,16 @@ public class Pacient extends Utilizator{
     private PreferintaPacient preferintaMea;
 
     public Pacient(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon) {
-        super(ID, nume, prenume, dataDeNastere, adresa, username, parola, numarDeTelefon);
+        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
     }
 
     public Pacient(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String diagnostic) {
-        super(ID, nume, prenume, dataDeNastere, adresa, username, parola, numarDeTelefon);
+        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
         Diagnostic = diagnostic;
     }
 
     public Pacient(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String diagnostic, Boolean necesitInsotit) {
-        super(ID, nume, prenume, dataDeNastere, adresa, username, parola, numarDeTelefon);
+        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
         Diagnostic = diagnostic;
         this.necesitInsotit = necesitInsotit;
     }
