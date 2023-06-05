@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Interfata.CreareContPacient">
+  <grid id="27dc6" binding="CreareContPacient" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="511" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="dfbb6" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Creare Cont Pacient"/>
+        </properties>
+      </component>
+      <component id="311aa" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Nume"/>
+        </properties>
+      </component>
+      <component id="3682e" class="javax.swing.JTextField" binding="txtNume">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="5925" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Prenume "/>
+        </properties>
+      </component>
+      <component id="d3081" class="javax.swing.JTextField" binding="txtPernume">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="96589" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Adresa Domiciliu"/>
+        </properties>
+      </component>
+      <component id="e935d" class="javax.swing.JTextField" binding="txtAdresa">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="5834c" class="javax.swing.JTextField" binding="txtNrTelefon">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="70d8a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Telefon"/>
+        </properties>
+      </component>
+      <component id="2b113" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Data Nastere"/>
+        </properties>
+      </component>
+      <component id="bfd8f" class="javax.swing.JTextField" binding="txtDataNastere">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="2745d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Diagnostic"/>
+        </properties>
+      </component>
+      <component id="cdc60" class="javax.swing.JTextField" binding="txtDiagnostic">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="579d7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Nume Utilizator"/>
+        </properties>
+      </component>
+      <component id="a8c4a" class="javax.swing.JTextField" binding="txtUsername">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="49573" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Parola"/>
+        </properties>
+      </component>
+      <component id="d4b6a" class="javax.swing.JPasswordField" binding="txtParola">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="770f5" class="javax.swing.JButton" binding="btnInapoi">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="&lt;-"/>
+        </properties>
+      </component>
+      <component id="5c478" class="javax.swing.JCheckBox" binding="checkNecesit">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Necesit Insotit/a"/>
+        </properties>
+      </component>
+      <component id="8c37a" class="javax.swing.JButton" binding="creareContPacientButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Creare Cont Pacient"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
