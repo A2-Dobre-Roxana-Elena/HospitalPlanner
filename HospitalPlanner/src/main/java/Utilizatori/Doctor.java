@@ -11,13 +11,13 @@ public class Doctor extends Utilizator {
     private  String adresaSpital ;
 
     public Doctor(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon) {
-        super(ID, nume, prenume, dataDeNastere, adresa, username, parola, numarDeTelefon);
+        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
         this.agendaMea = new Agenda();
         listaMeaDePacienti = new ArrayList<Pacient>();
     }
 
     public Doctor(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String adresaSpital) {
-        super(ID, nume, prenume, dataDeNastere, adresa, username, parola, numarDeTelefon);
+        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
         this.adresaSpital = adresaSpital;
         this.agendaMea = new Agenda();
         listaMeaDePacienti = new ArrayList<Pacient>();

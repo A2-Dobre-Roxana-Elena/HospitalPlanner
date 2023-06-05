@@ -7,18 +7,16 @@ public abstract class Utilizator {
     private String Nume ;
     private String Prenume;
     private Date dataDeNastere;
-    private String Adresa;
     private String Username;
     private String Parola;
 
     private String numarDeTelefon;
 
-    public Utilizator(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon) {
+    public Utilizator(String ID, String nume, String prenume, Date dataDeNastere, String username, String parola, String numarDeTelefon) {
         this.ID = ID;
         Nume = nume;
         Prenume = prenume;
         this.dataDeNastere = dataDeNastere;
-        Adresa = adresa;
         Username = username;
         Parola = parola;
         this.numarDeTelefon = numarDeTelefon;
@@ -38,10 +36,6 @@ public abstract class Utilizator {
 
     public Date getDataDeNastere() {
         return dataDeNastere;
-    }
-
-    public String getAdresa() {
-        return Adresa;
     }
 
     public String getUsername() {
@@ -72,10 +66,6 @@ public abstract class Utilizator {
         this.dataDeNastere = dataDeNastere;
     }
 
-    public void setAdresa(String adresa) {
-        Adresa = adresa;
-    }
-
     public void setUsername(String username) {
         Username = username;
     }
@@ -95,7 +85,6 @@ public abstract class Utilizator {
                 ", Nume='" + Nume + '\'' +
                 ", Prenume='" + Prenume + '\'' +
                 ", dataDeNastere=" + dataDeNastere +
-                ", Adresa='" + Adresa + '\'' +
                 ", Username='" + Username + '\'' +
                 ", Parola='" + Parola + '\'' +
                 ", numarDeTelefon='" + numarDeTelefon + '\'' +
