@@ -32,23 +32,7 @@ public class Programare {
     public String getTipulProgramarii() {
         return tipulProgramarii;
     }
-
-//    public void setDoctorul(Doctor doctorul) {
-//        Doctorul = doctorul;
-//    }
-//
-//    public void setPacientul(Pacient pacientul) {
-//        Pacientul = pacientul;
-//    }
-//
-//    public void setDataSiOra(Date dataSiOra) {
-//        this.dataSiOra = dataSiOra;
-//    }
-//
-//    public void setTipulProgramarii(String tipulProgramarii) {
-//        this.tipulProgramarii = tipulProgramarii;
-//    }
-
+    
 
     @Override
     public boolean equals(Object o) {
