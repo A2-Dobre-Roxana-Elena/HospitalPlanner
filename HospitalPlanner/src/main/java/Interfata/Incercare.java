@@ -59,12 +59,7 @@ public Incercare()  {
     }
 
     public static void main(String[] args) {
-        Incercare incercare= new Incercare();
-        incercare.setContentPane(incercare.MyPannel);
-        incercare.setTitle("Meniu Principal");
-        //incercare.setSize(300,400);
-        incercare.setBounds(600,200,600,400);
-        incercare.setVisible(true);
-        incercare.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
+
 }
