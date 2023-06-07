@@ -1,19 +1,29 @@
 package Utilizatori;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
-
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Utilizator {
-    private String ID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Integer ID;
+    @Column(name = "nume", nullable = false)
     private String Nume ;
+    @Column(name = "premune", nullable = false)
     private String Prenume;
+    @Column(name = "dataDeNastere", nullable = false)
     private Date dataDeNastere;
+    @Column(name = "username", nullable = false, unique = true)
     private String Username;
+    @Column(name = "parola", nullable = false)
     private String Parola;
-
+    @Column(name = "numarDeTelefon", nullable = false)
     private String numarDeTelefon;
 
-    public Utilizator(String ID, String nume, String prenume, Date dataDeNastere, String username, String parola, String numarDeTelefon) {
-        this.ID = ID;
+    public Utilizator( String nume, String prenume, Date dataDeNastere, String username, String parola, String numarDeTelefon) {
         Nume = nume;
         Prenume = prenume;
         this.dataDeNastere = dataDeNastere;
@@ -22,7 +32,7 @@ public abstract class Utilizator {
         this.numarDeTelefon = numarDeTelefon;
     }
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
@@ -50,7 +60,7 @@ public abstract class Utilizator {
         return numarDeTelefon;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 

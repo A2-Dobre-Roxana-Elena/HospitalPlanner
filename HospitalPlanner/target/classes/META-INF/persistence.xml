@@ -8,9 +8,10 @@
         <!-- Define the class for Hibernate which implements JPA -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Define the object that should be persisted in the database -->
-        <class>programari.Programare</class>
-        <class>utilizatori.Doctor</class>
-        <class>utilizatori.Pacient</class>
+        <class>Programari.Programare</class>
+        <class>Utilizatori.Doctor</class>
+        <class>Utilizatori.Pacient</class>
+        <class>AgendaSaptamanala.Zi</class>
         <properties>
             <!-- Driver pentru baza de date -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />

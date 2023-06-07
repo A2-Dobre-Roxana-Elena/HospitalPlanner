@@ -3,49 +3,55 @@ package Utilizatori;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import Agenda.Agenda;
+import AgendaSaptamanala.Zi;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "doctori")
 public class Doctor extends Utilizator {
-    private List<Pacient> listaMeaDePacienti;
-    private Agenda agendaMea;
+    //@JsonIgnore
+//    @OneToMany(mappedBy = "doctor")
+//    private List<Pacient> listaMeaDePacienti;
+    //private Agenda agendaMea;
+    //@JsonIgnore
+    @OneToMany(mappedBy = "doctor")
+    private List<Zi> agendaSaptamanala;
+
+    @Column(name = "adresaSpital")
     private  String adresaSpital ;
 
-    public Doctor(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon) {
-        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
-        this.agendaMea = new Agenda();
-        listaMeaDePacienti = new ArrayList<Pacient>();
+    public Doctor( String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon) {
+        super( nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
+       // listaMeaDePacienti = new ArrayList<Pacient>();
     }
 
-    public Doctor(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String adresaSpital) {
-        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
+    public Doctor( String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String adresaSpital) {
+        super( nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
         this.adresaSpital = adresaSpital;
-        this.agendaMea = new Agenda();
-        listaMeaDePacienti = new ArrayList<Pacient>();
+        //listaMeaDePacienti = new ArrayList<Pacient>();
     }
 
-    public void adaugaPacient(Pacient deAdaugat)
-    {
-        this.listaMeaDePacienti.add(deAdaugat);
-    }
+//    public void adaugaPacient(Pacient deAdaugat)
+//    {
+//        this.listaMeaDePacienti.add(deAdaugat);
+//    }
 
-    public void stergePacient(Pacient deSters)
-    {
-        this.listaMeaDePacienti.remove(deSters);
-    }
+//    public void stergePacient(Pacient deSters)
+//    {
+//        this.listaMeaDePacienti.remove(deSters);
+//    }
 
-    public int NumarPacienti()
-    {
-        return this.listaMeaDePacienti.size();
-    }
+//    public int NumarPacienti()
+//    {
+//
+//        return this.listaMeaDePacienti.size();
+//    }
 
-    public List<Pacient> getListaMeaDePacienti() {
-        return listaMeaDePacienti;
-    }
-
-    public Agenda getAgendaMea() {
-        return agendaMea;
-    }
-
+//    public List<Pacient> getListaMeaDePacienti() {
+//
+//        return listaMeaDePacienti;
+//    }
     public String getAdresaSpital() {
         return adresaSpital;
     }
@@ -58,8 +64,7 @@ public class Doctor extends Utilizator {
     @Override
     public String toString() {
         return "Doctor{" + super.toString()+
-                "listaMeaDePacienti=" + listaMeaDePacienti +
-                ", agendaMea=" + agendaMea +
+                //"listaMeaDePacienti=" + listaMeaDePacienti +
                 ", adresaSpital='" + adresaSpital + '\'' +
                 '}';
     }

@@ -1,43 +1,40 @@
 package Utilizatori;
 
+import Programari.Programare;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
-
+@Entity
+@Table(name = "pacienti")
 public class Pacient extends Utilizator{
+    @Column(name = "diagnostic")
     private String Diagnostic;
+    @Column(name = "necisitaInsotit")
     private Boolean necesitInsotit;
+    @JsonIgnore
+    @OneToMany(mappedBy = "Pacientul")
+    private List<Programare> listaDeProgramari;
 
-    private PreferintaPacient preferintaMea;
 
-    public Pacient(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon) {
-        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
+    public Pacient( String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon) {
+        super( nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
     }
 
-    public Pacient(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String diagnostic) {
-        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
+    public Pacient( String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String diagnostic) {
+        super( nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
         Diagnostic = diagnostic;
     }
 
-    public Pacient(String ID, String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String diagnostic, Boolean necesitInsotit) {
-        super(ID, nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
+    public Pacient( String nume, String prenume, Date dataDeNastere, String adresa, String username, String parola, String numarDeTelefon, String diagnostic, Boolean necesitInsotit) {
+        super( nume, prenume, dataDeNastere, username, parola, numarDeTelefon);
         Diagnostic = diagnostic;
         this.necesitInsotit = necesitInsotit;
-    }
-
-    public void adaugaPreferinta(PreferintaPacient preferinta)
-    {
-        preferintaMea = preferinta;
-        // aici o sa apelam algoritmul obisnuit
-    }
-
-    public void stergePreferinta(PreferintaPacient preferinta)
-    {
-        preferintaMea = null;
-    }
-
-    public PreferintaPacient getPreferintaMea()
-    {
-        return preferintaMea;
     }
 
     public String getDiagnostic() {
@@ -62,12 +59,12 @@ public class Pacient extends Utilizator{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pacient pacient = (Pacient) o;
-        return Objects.equals(Diagnostic, pacient.Diagnostic) && Objects.equals(necesitInsotit, pacient.necesitInsotit) && Objects.equals(preferintaMea, pacient.preferintaMea);
+        return Objects.equals(Diagnostic, pacient.Diagnostic) && Objects.equals(necesitInsotit, pacient.necesitInsotit);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Diagnostic, necesitInsotit, preferintaMea);
+        return Objects.hash(Diagnostic, necesitInsotit);
     }
 
     @Override
