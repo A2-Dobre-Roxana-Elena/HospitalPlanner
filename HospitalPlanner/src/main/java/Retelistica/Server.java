@@ -1,5 +1,11 @@
 package Retelistica;
 
+import Utilizatori.Doctor;
+import Utilizatori.Pacient;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,9 +22,13 @@ public class Server {
     private static ArrayList<MeniuClient> clienti = new ArrayList<>();
     private static ExecutorService pool = Executors.newFixedThreadPool(4);
 
+    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HospitalPlanner");
+    private EntityManager entityManager = entityManagerFactory.createEntityManager();
+
 
     public static void main(String[] args) throws IOException {
         ServerSocket listener = new ServerSocket(PORT);
+
 
         while( true )
         {
@@ -39,5 +49,31 @@ public class Server {
 //        listener.close();
 //        client.close();
 
+    }
+
+    public EntityManagerFactory getEntityManagerFactory() {
+        return entityManagerFactory;
+    }
+
+    public EntityManager getEntityManager() {
+        return entityManager;
+    }
+
+    public synchronized void adaugaDoctor(Doctor doctor) {
+        entityManager.getTransaction().begin();
+        entityManager.persist(doctor);
+        entityManager.getTransaction().commit();
+    }
+
+    public synchronized void adaugaPacient(Pacient pacient) {
+        entityManager.getTransaction().begin();
+        entityManager.persist(pacient);
+        entityManager.getTransaction().commit();
+    }
+
+    public synchronized void stergeUtilizator(Pacient pacient) {
+        entityManager.getTransaction().begin();
+        entityManager.persist(pacient);
+        entityManager.getTransaction().commit();
     }
 }
