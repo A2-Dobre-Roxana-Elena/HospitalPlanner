@@ -16,19 +16,7 @@ public class Main {
         Pacient Maria = new Pacient("Ion","Ionul","2003.04.08", "adresa", "username","parola", "teelfon","disgnostic");
 
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HospitalPlanner");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-
-        entityManager.getTransaction().begin();
-        entityManager.persist(Maria);
-        entityManager.getTransaction().commit();
-        entityManager.getTransaction().begin();
-        entityManager.persist(John);
-        entityManager.getTransaction().commit();
-
-        entityManager.close();
-        entityManagerFactory.close();
 
 
     }

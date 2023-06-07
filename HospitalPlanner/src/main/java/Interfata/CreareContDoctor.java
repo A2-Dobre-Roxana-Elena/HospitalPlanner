@@ -1,6 +1,8 @@
 package Interfata;
 
 import Utilizatori.Doctor;
+import Retelistica.*;
+import jakarta.persistence.EntityManager;
 
 import javax.print.Doc;
 import javax.swing.*;
@@ -39,6 +41,13 @@ public class CreareContDoctor extends JFrame {
 
             Doctor doctorUtilizator = new Doctor(txtNume.getText(),txtPrenume.getText(),txtDataNastere.getText(),txtUsername.getText(),txtParola.getText(),txtNrTelefon.getText(),txtAdresaSpital.getText());
             PaginaDoctor paginaDoctor= new PaginaDoctor(doctorUtilizator);
+
+//            EntityManager entityManager = Server.this.getEntityManager();
+//            Server s = Server.this.adaugaDoctor();
+
+
+
+
             paginaDoctor.setContentPane(paginaDoctor.getPaginaDoctorPanel());
             paginaDoctor.setTitle("Doctor - Pagina Mea");
             //incercare.setSize(300,400);
