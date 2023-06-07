@@ -9,23 +9,23 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.Objects;
 
-@Entity
-@Table(name = "Zi")
+//@Entity
+//@Table(name = "Zi")
 public class Zi {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    //    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id", nullable = false)
     private int id;
-    @Column(name = "inceputProgram", nullable = false)
+    // @Column(name = "inceputProgram", nullable = false)
     private int inceputProgram;
-    @Column(name = "sfarsitProgram", nullable = false)
+    // @Column(name = "sfarsitProgram", nullable = false)
     private int sfarsitProgram;
 
-    @OneToOne
-    @JoinColumn(name = "idDoctor")
+    //    @OneToOne
+//    @JoinColumn(name = "idDoctor")
     //private int idDoctor;
     private Doctor doctor;
-
+    // @OneToMany(mappedBy = "Zi")
     public List<Programare> getProgramari() {
         return programari;
     }
@@ -34,13 +34,13 @@ public class Zi {
         this.programari = programari;
     }
 
-    @OneToMany
-    @JoinColumn(name = "idProgramare")
+//    @OneToMany
+//    @JoinColumn(name = "idProgramare")
     //private int idProgramare;
     //private List<Integer> idProgramare;
 
     private List<Programare> programari;
-    @Column(name = "nume")
+    //    @Column(name = "nume")
     private String numeZi;
 
     public Zi() {}
