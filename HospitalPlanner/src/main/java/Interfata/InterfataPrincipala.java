@@ -4,21 +4,22 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Incercare extends JFrame {
+public class InterfataPrincipala extends JFrame {
     private JPanel MyPannel;
     private JLabel MeniuPrincipal;
-    private JButton logareButton;
+    private JButton logareDoctorButton;
     private JButton creareContPacientButton;
     private JButton creareContDoctorButton;
+    private JButton logarePacientButton;
     private JTextField myField;
     private JButton btnClick;
-public Incercare()  {
-    logareButton.addActionListener(new ActionListener() {
+public InterfataPrincipala()  {
+    logareDoctorButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            Logare logare= new Logare();
-            logare.setContentPane(logare.getPannelLogare());
-            logare.setTitle("Meniu Principal");
+            LogareDoctor logare= new LogareDoctor();
+            logare.setContentPane(logare.getLogareDoctorPanel());
+                logare.setTitle("Logare Doctor");
             //incercare.setSize(300,400);
             logare.setBounds(600,200,600,400);
             logare.setVisible(true);
@@ -31,7 +32,7 @@ public Incercare()  {
         public void actionPerformed(ActionEvent e) {
             CreareContPacient creareContPacient = new CreareContPacient();
             creareContPacient.setContentPane(creareContPacient.getCreareContPacient());
-            creareContPacient.setTitle("Logare");
+            creareContPacient.setTitle("Creare Cont Pacient");
             //incercare.setSize(300,400);
             creareContPacient.setBounds(600,200,600,400);
             creareContPacient.setVisible(true);
@@ -44,11 +45,24 @@ public Incercare()  {
         public void actionPerformed(ActionEvent e) {
             CreareContDoctor creareContDoctor = new CreareContDoctor();
             creareContDoctor.setContentPane(creareContDoctor.getCreareContDoctorPanel());
-            creareContDoctor.setTitle("Logare");
+            creareContDoctor.setTitle("Creare Cont Doctor");
             //incercare.setSize(300,400);
             creareContDoctor.setBounds(600,200,600,400);
             creareContDoctor.setVisible(true);
             creareContDoctor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
+        }
+    });
+    logarePacientButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            LogarePacient logare= new LogarePacient();
+            logare.setContentPane(logare.getPannelLogare());
+            logare.setTitle("Logare Pacient");
+            //incercare.setSize(300,400);
+            logare.setBounds(600,200,600,400);
+            logare.setVisible(true);
+            logare.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             dispose();
         }
     });
@@ -59,7 +73,13 @@ public Incercare()  {
     }
 
     public static void main(String[] args) {
-
+        InterfataPrincipala interfataMea = new InterfataPrincipala();
+            interfataMea.setContentPane(interfataMea.getMyPannel());
+            interfataMea.setTitle("Meniu Principal");
+            //incercare.setSize(300,400);
+            interfataMea.setBounds(600,200,600,400);
+            interfataMea.setVisible(true);
+            interfataMea.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
 }

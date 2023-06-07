@@ -1,9 +1,11 @@
 package Interfata;
 
+import Utilizatori.Doctor;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
+import java.util.Date;
 
 public class CreareContDoctor extends JFrame {
     private JTextField txtNume;
@@ -32,12 +34,15 @@ public class CreareContDoctor extends JFrame {
             System.out.println("Telefonul si data de nastere sunt :" + txtNrTelefon.getText() + txtDataNastere.getText());
             System.out.println("Username-ul si Parola sunt: " + txtUsername.getText() + " "+ txtParola.getText());
 
-            PaginaDoctor paginaDoctor= new PaginaDoctor();
+            Doctor doctorUtilizator = new Doctor(txtNume.getText(),txtPrenume.getText(),txtDataNastere.getText(), txtAdresa.getText(),txtUsername.getText(),txtParola.getText(),txtNrTelefon.getText(), txtAdresaSpital.getText() );
+
+            PaginaDoctor paginaDoctor= new PaginaDoctor(doctorUtilizator);
             paginaDoctor.setContentPane(paginaDoctor.getPaginaDoctorPanel());
-            paginaDoctor.setTitle("Logare");
+            paginaDoctor.setTitle("Doctor - Pagina Mea");
             //incercare.setSize(300,400);
             paginaDoctor.setBounds(600,200,600,400);
             paginaDoctor.setVisible(true);
+            //paginaDoctor.setLabelNumePrenume(txtNume.getText(),txtPrenume.getText());
             paginaDoctor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             dispose();
         }
@@ -45,9 +50,9 @@ public class CreareContDoctor extends JFrame {
     btnInapoi.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            Incercare incercare= new Incercare();
+            InterfataPrincipala incercare= new InterfataPrincipala();
             incercare.setContentPane(incercare.getMyPannel());
-            incercare.setTitle("Logare");
+            incercare.setTitle("Meniu Principal");
             //incercare.setSize(300,400);
             incercare.setBounds(600,200,600,400);
             incercare.setVisible(true);

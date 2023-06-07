@@ -1,16 +1,12 @@
 package Retelistica;
 
-import Utilizatori.Doctor;
-import Utilizatori.Pacient;
 import Interfata.*;
 
 import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.Date;
 
 public class Client {
     private static final String SERVER_IP = "127.0.0.1";
@@ -24,7 +20,7 @@ public class Client {
 //        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
 
-        Incercare interfataMea = new Incercare();
+        InterfataPrincipala interfataMea = new InterfataPrincipala();
 
         while (true)
         {

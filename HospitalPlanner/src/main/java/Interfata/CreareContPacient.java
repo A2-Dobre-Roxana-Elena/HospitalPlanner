@@ -1,5 +1,7 @@
 package Interfata;
 
+import Utilizatori.Pacient;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,9 +28,9 @@ public class CreareContPacient extends JFrame {
     btnInapoi.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            Incercare incercare= new Incercare();
+            InterfataPrincipala incercare= new InterfataPrincipala();
             incercare.setContentPane(incercare.getMyPannel());
-            incercare.setTitle("Logare");
+            incercare.setTitle("Meniu Principal");
             //incercare.setSize(300,400);
             incercare.setBounds(600,200,600,400);
             incercare.setVisible(true);
@@ -44,11 +46,13 @@ public class CreareContPacient extends JFrame {
                 System.out.println("Telefonul si data de nastere sunt :" + txtNrTelefon.getText() + txtDataNastere.getText());
                 System.out.println("Username-ul si Parola sunt: " + txtUsername.getText() + " "+ txtParola.getText());
                 System.out.println("Diagnosticul este " + txtDiagnostic.getText());
-                System.out.println(checkNecesit.getText());
-                //// NECESITA REVAZUT DACA MERGE SAU NU
-                PaginaPacient paginaPacient= new PaginaPacient();
+                System.out.println(checkNecesit.isSelected());
+
+                Pacient utilizator = new Pacient(txtNume.getText(),txtPernume.getText(), txtDataNastere.getText(),txtAdresa.getText(),txtUsername.getText(),txtParola.getText(),txtNrTelefon.getText(),txtDiagnostic.getText(),checkNecesit.isSelected());
+
+                PaginaPacient paginaPacient= new PaginaPacient(utilizator);
                 paginaPacient.setContentPane(paginaPacient.getPaginaPacientPanel());
-                paginaPacient.setTitle("Logare");
+                paginaPacient.setTitle("Pacient - Pagina Mea");
                 //incercare.setSize(300,400);
                 paginaPacient.setBounds(600,200,600,400);
                 paginaPacient.setVisible(true);
@@ -56,5 +60,9 @@ public class CreareContPacient extends JFrame {
                 dispose();
             }
         });
+    }
+
+    public static void main(String[] args) {
+
     }
 }
