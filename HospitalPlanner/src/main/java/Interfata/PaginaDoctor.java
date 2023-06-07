@@ -29,8 +29,10 @@ public class PaginaDoctor extends JFrame {
 
         this.labelNumePrenume.setText("Numele si Prenume: "+this.doctorUtilizator.getNume() + " " +this.doctorUtilizator.getPrenume() );
         this.labelAdresaSpital.setText("Adresa Spital: "+this.doctorUtilizator.getAdresaSpital());
-        this.labelNrPacienti.setText("Numar Pacienti: "+this.doctorUtilizator.NumarPacienti());
-        this.labelPacienti.setText("Pacienti: "+this.doctorUtilizator.getListaMeaDePacienti().toString());
+//        this.labelNrPacienti.setText("Numar Pacienti: "+this.doctorUtilizator.NumarPacienti());
+//        this.labelPacienti.setText("Pacienti: "+this.doctorUtilizator.getListaMeaDePacienti().toString());
+        this.labelNrPacienti.setText("Numar Pacienti: ");
+        this.labelPacienti.setText("Pacienti: ");
 
         System.out.println(this.doctorUtilizator.toString());
     btnDeconect.addActionListener(new ActionListener() {

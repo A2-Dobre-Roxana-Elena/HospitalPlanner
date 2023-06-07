@@ -2,6 +2,7 @@ package Interfata;
 
 import Utilizatori.Doctor;
 
+import javax.print.Doc;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,8 +35,9 @@ public class CreareContDoctor extends JFrame {
             System.out.println("Telefonul si data de nastere sunt :" + txtNrTelefon.getText() + txtDataNastere.getText());
             System.out.println("Username-ul si Parola sunt: " + txtUsername.getText() + " "+ txtParola.getText());
 
-            Doctor doctorUtilizator = new Doctor(txtNume.getText(),txtPrenume.getText(),txtDataNastere.getText(), txtAdresa.getText(),txtUsername.getText(),txtParola.getText(),txtNrTelefon.getText(), txtAdresaSpital.getText() );
+//            Doctor doctorUtilizator = new Doctor(txtNume.getText(),txtPrenume.getText(),txtDataNastere.getText(), txtAdresa.getText(),txtUsername.getText(),txtParola.getText(),txtNrTelefon.getText(), txtAdresaSpital.getText() );
 
+            Doctor doctorUtilizator = new Doctor(txtNume.getText(),txtPrenume.getText(),txtDataNastere.getText(),txtUsername.getText(),txtParola.getText(),txtNrTelefon.getText(),txtAdresaSpital.getText());
             PaginaDoctor paginaDoctor= new PaginaDoctor(doctorUtilizator);
             paginaDoctor.setContentPane(paginaDoctor.getPaginaDoctorPanel());
             paginaDoctor.setTitle("Doctor - Pagina Mea");

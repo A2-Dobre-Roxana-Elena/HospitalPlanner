@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import AgendaSaptamanala.AgendaSaptamanala;
-import AgendaSaptamanala.Zi;
+//import AgendaSaptamanala.AgendaSaptamanala;
+//import AgendaSaptamanala.Zi;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
